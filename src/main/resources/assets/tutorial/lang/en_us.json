@@ -1,5 +1,8 @@
 {
   "item.tutorial.flour": "Wheat Flour",
   "item.tutorial.mortar_and_pestle": "Mortar And Pestle",
+
+  "block.tutorial.block_of_flour": "Block of Flour",
+
   "itemGroup.tutorial.items": "Tutorial Mod Items"
 }

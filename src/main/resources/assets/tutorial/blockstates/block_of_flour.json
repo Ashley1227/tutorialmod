@@ -1,5 +1,6 @@
 {
   "variants": {
-    "": {"model": "tutorial:block/block_of_flour"}
+    "wet=false": {"model": "tutorial:block/block_of_flour"},
+    "wet=true": {"model": "tutorial:block/block_of_flour_wet"}
   }
 }

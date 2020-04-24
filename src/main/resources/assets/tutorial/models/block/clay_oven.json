@@ -1,0 +1,9 @@
+{
+  "parent": "block/orientable_with_bottom",
+  "textures": {
+    "top": "minecraft:block/terracotta",
+    "bottom": "minecraft:block/stone",
+    "front": "tutorial:block/clay_oven_front",
+    "side": "tutorial:block/clay_oven_side"
+  }
+}

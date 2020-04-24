@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "tutorial:block/clay_oven" },
+    "facing=south": { "model": "tutorial:block/clay_oven", "y": 180 },
+    "facing=west":  { "model": "tutorial:block/clay_oven", "y": 270 },
+    "facing=east":  { "model": "tutorial:block/clay_oven", "y": 90 }
+  }
+}

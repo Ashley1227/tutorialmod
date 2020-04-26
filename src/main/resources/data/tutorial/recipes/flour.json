@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "minecraft:wheat"
+      "tag": "tutorial:flourable"
     },
     {
       "item": "tutorial:mortar_and_pestle"

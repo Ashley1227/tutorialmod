@@ -17,6 +17,9 @@
   "entrypoints": {
     "main": [
       "com.ashley.tutorial.TutorialMod"
+    ],
+    "client": [
+      "com.ashley.tutorial.TutorialModClient"
     ]
   },
   "mixins": [

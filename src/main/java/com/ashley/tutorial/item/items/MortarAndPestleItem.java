@@ -1,4 +1,4 @@
-package com.ashley.tutorial.item;
+package com.ashley.tutorial.item.items;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;

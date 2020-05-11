@@ -1,7 +1,6 @@
 package com.ashley.tutorial.block.blocks;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
+import net.minecraft.block.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.state.StateManager;
@@ -16,12 +15,18 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
 
-public class FlourBlock extends Block {
+public class FlourBlock extends TransparentBlock {
+
     public static final BooleanProperty WET = BooleanProperty.of("wet");
 
     public FlourBlock(Settings settings) {
         super(settings);
         setDefaultState(getStateManager().getDefaultState().with(WET, false));
+    }
+
+    @Override
+    protected void appendProperties(StateManager.Builder<Block, BlockState> stateManager) {
+        stateManager.add(WET);
     }
 
     @Override
@@ -33,14 +38,11 @@ public class FlourBlock extends Block {
     }
 
     @Override
-    protected void appendProperties(StateManager.Builder<Block, BlockState> stateManager) {
-        stateManager.add(WET);
-    }
-    @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         world.setBlockState(pos, state.with(WET, !state.get(WET)));
         return ActionResult.SUCCESS;
     }
+
     private static boolean waterOnAnySide(BlockView view, BlockPos pos) {
         boolean bl = false;
         BlockPos.Mutable mutable = new BlockPos.Mutable(pos);
@@ -59,9 +61,9 @@ public class FlourBlock extends Block {
                 }
             }
         }
-
         return bl;
     }
+
     private static boolean isWater(BlockState state) {
         return state.getFluidState().matches(FluidTags.WATER);
     }

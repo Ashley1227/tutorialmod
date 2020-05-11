@@ -4,7 +4,6 @@ import com.ashley.tutorial.block.entity.TutorialBlockEntities;
 import com.ashley.tutorial.container.containers.ClayOvenContainer;
 import net.minecraft.block.entity.LootableContainerBlockEntity;
 import net.minecraft.container.Container;
-import net.minecraft.container.ShulkerBoxContainer;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
 import net.minecraft.inventory.Inventory;
@@ -61,7 +60,6 @@ public class ClayOvenBlockEntity extends LootableContainerBlockEntity implements
 		}
 	}
 
-	// new stuff
 	@Override
 	protected Text getContainerName() {
 		return new TranslatableText("container.tutorial.clay_oven");

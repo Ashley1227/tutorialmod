@@ -17,28 +17,22 @@ public class ClayOvenContainer extends Container {
 		checkContainerSize(inventory, INVENTORY_SIZE);
 		inventory.onInvOpen(playerInventory.player);
 
-		// Creating Slots for GUI. A Slot is essentially a correspoding from inventory itemstacks to the GUI position.
-		int i;
-		int j;
-
-		// Chest Inventory
-		for (i = 0; i < 3; i++) {
-			for (j = 0; j < 9; j++) {
-				this.addSlot(new Slot(inventory, i * 9 + j, 8 + j * 18, 18 + i * 18));
+		// Clay Oven Inventory
+		for (int y = 0; y < 3; y++) {
+			for (int x = 0; x < 9; x++) {
+				this.addSlot(new Slot(inventory, y * 9 + x, 8 + x * 18, 18 + y * 18));
 			}
 		}
-
 
 		// Player Inventory (27 storage + 9 hotbar)
-		for (i = 0; i < 3; i++) {
-			for (j = 0; j < 9; j++) {
-				this.addSlot(new Slot(playerInventory, i * 9 + j + 9, 8 + j * 18, 84 + i * 18));
+		for (int y = 0; y < 3; y++) {
+			for (int x = 0; x < 9; x++) {
+				this.addSlot(new Slot(playerInventory, y * 9 + x + 9, 8 + x * 18, 84 + y * 18));
 			}
 		}
 
-
-		for (j = 0; j < 9; j++) {
-			this.addSlot(new Slot(playerInventory, j, 8 + j * 18, 142));
+		for (int x = 0; x < 9; x++) {
+			this.addSlot(new Slot(playerInventory, x, 8 + x * 18, 142));
 		}
 	}
 

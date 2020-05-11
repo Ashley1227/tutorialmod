@@ -1,0 +1,8 @@
+{
+  "cough": {
+    "subtitle": "subtitles.tutorial.cough",
+    "sounds": [
+      "tutorial:cough"
+    ]
+  }
+}

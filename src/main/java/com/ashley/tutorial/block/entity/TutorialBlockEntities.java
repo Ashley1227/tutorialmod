@@ -2,7 +2,9 @@ package com.ashley.tutorial.block.entity;
 
 import com.ashley.tutorial.block.TutorialBlocks;
 import com.ashley.tutorial.block.entity.entities.ClayOvenBlockEntity;
+import net.minecraft.block.StonecutterBlock;
 import net.minecraft.block.entity.BlockEntityType;
+import net.minecraft.container.StonecutterContainer;
 import net.minecraft.util.registry.Registry;
 
 public class TutorialBlockEntities {
